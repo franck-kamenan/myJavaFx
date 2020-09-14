@@ -23,7 +23,14 @@ public class WindowController {
 
     @FXML
     private void calculateTip(){
+        double enteredAmount = Double.parseDouble(amount.getText());
+        double enteredTipPercentage = tipSlider.getValue();
 
+        double calculatedTipAmount = (enteredAmount / 100) * enteredTipPercentage;
+        double calculatedTotalAmount = enteredAmount + calculatedTipAmount;
+
+        tipAmount.setText(String.valueOf(calculatedTipAmount));
+        totalAmount.setText(String.valueOf(calculatedTotalAmount));
     }
 
     @FXML
