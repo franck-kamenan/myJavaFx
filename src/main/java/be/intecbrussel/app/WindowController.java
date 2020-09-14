@@ -29,7 +29,7 @@ public class WindowController {
     @FXML
     public void initialize(){
         tipSlider.valueProperty().addListener((observableValue, oldValue, newValue) -> {
-            percentage.setText(String.valueOf(newValue));
+            percentage.setText(String.format("%.2f%s", newValue, "%"));
         });
     }
 }
