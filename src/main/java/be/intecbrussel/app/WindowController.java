@@ -29,8 +29,8 @@ public class WindowController {
         double calculatedTipAmount = (enteredAmount / 100) * enteredTipPercentage;
         double calculatedTotalAmount = enteredAmount + calculatedTipAmount;
 
-        tipAmount.setText(String.valueOf(calculatedTipAmount));
-        totalAmount.setText(String.valueOf(calculatedTotalAmount));
+        tipAmount.setText(String.format("%.2f", calculatedTipAmount));
+        totalAmount.setText(String.format("%.2f", calculatedTotalAmount));
     }
 
     @FXML
